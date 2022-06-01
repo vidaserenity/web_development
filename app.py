@@ -3,6 +3,10 @@ import sqlite3
 
 app = Flask(__name__)
 
+@app.route('/')
+def main():
+    return render_template('main.html')
+
 def get_message_db():
     """
     Function: handles creating the database of messages.
